@@ -1,5 +1,9 @@
 {
-  ecmaFeatures: {
-     modules: true
-    }
+  "ecmaFeatures": {
+     "modules": true,
+     "jsx":true
+  },
+  "plugins": [
+    "react"
+  ]
 }

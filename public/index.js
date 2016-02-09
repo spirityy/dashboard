@@ -1,4 +1,9 @@
 import React from 'react'
-import {Route} from 'react-router'
+import {Router,Route,Link} from 'react-router'
+import ReactDOM from 'react-dom'
 
-console.info(111);
+ReactDOM.render((
+  <div>
+  313213
+  </div>
+),document.getElementById('app'))
