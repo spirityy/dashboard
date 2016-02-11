@@ -1,8 +1,15 @@
 {
+  "extends": "rackt",
   "ecmaFeatures": {
+    "blockBindings": true,
      "modules": true,
      "jsx":true
   },
+  "env":{
+    "browser": true,
+    "node": true
+  },
+  "space-after-keywords":"never",
   "plugins": [
     "react"
   ]

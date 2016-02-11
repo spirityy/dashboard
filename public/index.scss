@@ -1,0 +1,22 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+header{
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color:#f0f0f0;
+}
+aside{
+  background-color: #f9f9f9;
+  width: 20%;
+  float: left;
+}
+main{
+  text-align: center;
+  width: 70%;
+  padding: 5%;
+  float: left;
+}
