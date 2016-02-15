@@ -5,12 +5,15 @@
      "modules": true,
      "jsx":true
   },
-  "env":{
-    "browser": true,
-    "node": true
-  },
   "space-after-keywords":"never",
   "plugins": [
     "react"
-  ]
+  ],
+  "env": {
+    "node": true
+  },
+  "rules":{
+    "no-console":0,
+    "no-var":0
+  }
 }

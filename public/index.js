@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router,Route,Link,browserHistory } from 'react-router'
+import { Router,Route,Link,browserHistory,IndexRoute } from 'react-router'
 import { render } from 'react-dom'
 import './index.css'
 //import data from './data.js'
@@ -25,24 +25,22 @@ const Side = React.createClass({
   }
 })
 
-const Main = React.createClass({
+const Index = React.createClass({
   render() {
-    console.info(this.props);
     return (
       <main>
-        {this.props.content || 'welcome'}
+        <h2>welcome</h2>
       </main>
     )
   }
 })
 
-/*
 const Orders = React.createClass({
   render() {
     return(
-      <div>
+      <main>
         <h2>Orders</h2>
-      </div>
+      </main>
     )
   }
 })
@@ -50,13 +48,12 @@ const Orders = React.createClass({
 const Users = React.createClass({
   render() {
     return(
-      <div>
+      <main>
         <h2>Users</h2>
-      </div>
+      </main>
     )
   }
 })
-*/
 
 const App = React.createClass({
   render() {
@@ -64,7 +61,7 @@ const App = React.createClass({
       <div>
         <Header/>
         <Side/>
-        <Main content={this.props.params.sideitem}/>
+        {this.props.children}
       </div>
     )
   }
@@ -73,7 +70,9 @@ const App = React.createClass({
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="/:sideitem" component={Main}/>
+      <IndexRoute component={Index}/>
+      <Route path="/orders" component={Orders}/>
+      <Route path="/users" component={Users}/>
     </Route>
   </Router>
 ),document.getElementById('app'))
