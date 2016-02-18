@@ -7,7 +7,14 @@ import './index.css'
 const Header = React.createClass({
   render() {
     return(
-      <header>Dashboard</header>
+      <header>
+        <div className="logo">
+          Logo
+        </div>
+        <div className="hd">
+          Dashboard
+        </div>
+      </header>
     )
   }
 })
@@ -17,8 +24,8 @@ const Side = React.createClass({
     return(
       <aside>
         <ul>
-          <li><Link to="/orders">Orders</Link></li>
-          <li><Link to="/users">Users</Link></li>
+          <li><Link to="/orders" activeClassName="active">Orders</Link></li>
+          <li><Link to="/users" activeClassName="active">Users</Link></li>
         </ul>
       </aside>
     )
@@ -39,7 +46,7 @@ const Orders = React.createClass({
   render() {
     return(
       <main>
-        <h2>Orders</h2>
+        <h2>This is Orders Page</h2>
       </main>
     )
   }
@@ -49,7 +56,7 @@ const Users = React.createClass({
   render() {
     return(
       <main>
-        <h2>Users</h2>
+        <h2>This is Users Page</h2>
       </main>
     )
   }
