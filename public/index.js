@@ -9,7 +9,7 @@ const Header = React.createClass({
     return(
       <header>
         <div className="logo">
-          Logo
+          <Link to="/">Logo</Link>
         </div>
         <div className="hd">
           Dashboard
