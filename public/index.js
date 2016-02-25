@@ -2,8 +2,12 @@ import React from 'react'
 import { Router,Route,Link,browserHistory,IndexRoute } from 'react-router'
 import { render } from 'react-dom'
 import './index.css'
-//import data from './data.js'
 
+//components
+import Orders from '../components/orders.js'
+import Users from '../components/users.js'
+
+//pages
 const Header = React.createClass({
   render() {
     return(
@@ -36,27 +40,9 @@ const Index = React.createClass({
   render() {
     return (
       <main>
-        <h2>welcome</h2>
-      </main>
-    )
-  }
-})
-
-const Orders = React.createClass({
-  render() {
-    return(
-      <main>
-        <h2>This is Orders Page</h2>
-      </main>
-    )
-  }
-})
-
-const Users = React.createClass({
-  render() {
-    return(
-      <main>
-        <h2>This is Users Page</h2>
+        <div className="main-wrapper">
+          <h2>welcome</h2>
+        </div>
       </main>
     )
   }
@@ -66,8 +52,8 @@ const App = React.createClass({
   render() {
     return(
       <div>
-        <Header/>
-        <Side/>
+        <Header />
+        <Side />
         {this.props.children}
       </div>
     )
@@ -77,9 +63,9 @@ const App = React.createClass({
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Index}/>
-      <Route path="/orders" component={Orders}/>
-      <Route path="/users" component={Users}/>
+      <IndexRoute component={Index} />
+      <Route path="/orders" component={Orders} />
+      <Route path="/users" component={Users} />
     </Route>
   </Router>
 ),document.getElementById('app'))

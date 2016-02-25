@@ -9,28 +9,31 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px; }
-  body a {
-    text-decoration: none; }
 
 header {
   height: 70px;
   line-height: 70px;
   background-color: #fff;
-  font-size: 24px; }
+  font-size: 24px;
+  clear: both; }
   header .logo {
-    display: inline-block;
+    float: left;
     width: 20%;
     text-align: center;
     font-size: 30px;
     height: 70px;
-    background-color: #25292A; }
+    background-color: #25292A;
+    border-bottom: 1px solid #454A4B; }
     header .logo a {
+      text-decoration: none;
       color: #EA7F31; }
   header .hd {
     height: 70px;
+    float: left;
     width: 75%;
     padding-left: 5%;
-    display: inline-block; }
+    display: inline-block;
+    border-bottom: 1px solid #EBEDED; }
 
 aside {
   height: 100%;
@@ -44,6 +47,7 @@ aside {
   aside ul li {
     list-style: none; }
   aside a {
+    text-decoration: none;
     font-weight: bold;
     display: block;
     color: #D1D6D8;
@@ -58,6 +62,35 @@ main {
   height: 100%;
   min-height: 1000px;
   background-color: #F3F5F5;
-  text-align: center;
   width: 80%;
   float: left; }
+  main .main-wrapper {
+    padding: 30px; }
+
+.users-wrapper, .orders-wrapper {
+  border: 1px solid #EBEDED;
+  border-radius: 5px;
+  background-color: #fff; }
+  .users-wrapper h2, .orders-wrapper h2 {
+    margin: 0;
+    font-size: 18px;
+    padding: 0 30px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #EBEDED; }
+  .users-wrapper .main, .orders-wrapper .main {
+    padding: 30px; }
+    .users-wrapper .main table, .orders-wrapper .main table {
+      width: 100%;
+      border-collapse: collapse; }
+    .users-wrapper .main table thead, .orders-wrapper .main table thead {
+      border-radius: 5px;
+      background-color: #CAD3D6; }
+    .users-wrapper .main table th, .orders-wrapper .main table th {
+      height: 35px;
+      line-height: 35px;
+      color: #fff; }
+    .users-wrapper .main table td, .orders-wrapper .main table td {
+      text-align: center;
+      height: 55px;
+      line-height: 55px; }

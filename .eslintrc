@@ -10,7 +10,9 @@
     "react"
   ],
   "env": {
-    "node": true
+    "node": true,
+    "browser":true,
+    "es6":true
   },
   "rules":{
     "no-console":0,
