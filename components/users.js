@@ -14,11 +14,13 @@ export default class Users extends React.Component {
   }
   deleteUser(e) {
     //delete User
+    /*
     const todel_user = this.state.datausers.find(function (data) {
       return data.id === parseInt(e.target.value,10)
     }.bind(e))
-    if (window.confirm('确定删除'+todel_user.name+'?')) {
-      this.state.datausers.splice(this.state.datausers.indexOf(todel_user),1)
+    */
+    if (window.confirm('确定删除'+e.target.name+'?')) {
+      this.state.datausers.splice(this.state.datausers.findIndex(data => data.id === parseInt(e.target.value,10)),1)
       this.setState({ datausers:this.state.datausers })
     }
   }
@@ -64,7 +66,7 @@ class User extends React.Component {
         <td>{this.props.user.name}</td>
         <td>{this.props.user.age}</td>
         <td>{this.props.user.sex}</td>
-        <td><button onClick={this.props.deleteUser} value={this.props.user.id}>delete</button></td>
+        <td><button onClick={this.props.deleteUser} name={this.props.user.name} value={this.props.user.id}>delete</button></td>
       </tr>
     )
   }

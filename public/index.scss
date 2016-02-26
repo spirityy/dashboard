@@ -108,6 +108,15 @@ main{
       text-align: center;
       height: 55px;
       line-height: 55px;
+      button{
+        cursor: pointer;
+        padding: 0 10px;
+        height: 33px;
+        border: none;
+        border-radius: 3px;
+        background-color: #E36E40;
+        color: #fff;
+      }
     }
   }
 }
