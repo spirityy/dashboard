@@ -59,8 +59,10 @@ aside{
     color: #D1D6D8;
     height: 50px;
     line-height: 50px;
-    padding-left: 5%;
+    padding-left: 20px;
     &.active{
+      border-left: 8px solid #EA7F31;
+      padding-left: 12px;
       background-color: #F3F5F5;
       color:#545D5F;
     }
@@ -104,7 +106,13 @@ main{
       line-height: 35px;
       color: #fff;
     }
-    table td{
+    tbody tr{
+      border-bottom: 1px solid #F0F0F0;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    tbody td{
       text-align: center;
       height: 55px;
       line-height: 55px;
