@@ -18,6 +18,7 @@
   "homepage": "https://github.com/spirityy/dashboard#readme",
   "dependencies": {
     "history": "^2.0.0-rc2",
+    "jquery": "^2.2.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0-rc5",

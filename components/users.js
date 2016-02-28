@@ -1,4 +1,5 @@
 import React from 'react'
+import $ from 'jquery'
 
 //import simulate data
 import datausers from '../data/users.js'
@@ -7,6 +8,9 @@ export default class Users extends React.Component {
   constructor() {
     super()
     this.state =  { datausers:datausers }
+  }
+  componentDidMount() {
+    console.info($)
   }
   addUser() {
     //add User
