@@ -3,7 +3,7 @@ html{
   height: 100%;
 }
 body {
-  font-family: 'Fira Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing:antialiased;
   width: 100%;
   height: 100%;
@@ -116,14 +116,36 @@ main{
       text-align: center;
       height: 55px;
       line-height: 55px;
+      input[type="text"],select{
+        font-size: 16px;
+        height: 28px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid #C7C7C7;
+        text-align: center;
+        background-color: #fff;
+      }
+      select{
+        width: 80px;
+        height: 30px;
+      }
       button{
         cursor: pointer;
-        padding: 0 10px;
+        width: 60px;
         height: 33px;
         border: none;
         border-radius: 3px;
-        background-color: #E36E40;
         color: #fff;
+      }
+      .editing-btn{
+        background-color: #4A913C;
+      }
+      .edit-btn{
+        background-color: #E8604A;
+      }
+      .del-btn{
+        margin-left: 5px;
+        background-color: #e81c4f;
       }
     }
   }
