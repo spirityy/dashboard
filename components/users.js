@@ -68,13 +68,17 @@ export default class Users extends React.Component {
 class User extends React.Component {
   constructor(props) {
     super(props)
+    this.initData()
+    this.state =  { editing:false }
+  }
+  initData() {
     this.uid = this.props.user.id
     this.uname = this.props.user.name
     this.uage = this.props.user.age
     this.usex = this.props.user.sex
-    this.state =  { editing:false }
   }
   editing() {
+    this.initData()
     this.setState({ editing:true })
   }
   HandleChange(e) {
@@ -84,7 +88,7 @@ class User extends React.Component {
     return(
       <tr>
         <td>
-          {this.state.editing?(<input type="text" name="uid" defaultValue={this.props.user.id} onChange={this.HandleChange.bind(this)}/>):this.props.user.id}
+          {this.props.user.id}
         </td>
         <td>
           {this.state.editing?(<input type="text" name="uname" defaultValue={this.props.user.name} onChange={this.HandleChange.bind(this)} />):this.props.user.name}
