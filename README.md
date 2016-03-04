@@ -1,6 +1,8 @@
 # dashboard
 A dashboard example with React/ReactRouter/Webpack
 
+![alt tag](https://raw.githubusercontent.com/spirityy/dashboard/dashboard_demo.png)
+
 =====================
 
 To run the example in your development environment:
