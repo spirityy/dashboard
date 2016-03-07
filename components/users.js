@@ -1,5 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router'
 import $ from 'jquery'
+
+//import component style
+import '../assets/css/user.css'
 
 //import simulate data
 import datausers from '../data/users.js'
@@ -57,6 +61,10 @@ export default class Users extends React.Component {
                     }.bind(this))}
                   </tbody>
                 </table>
+                <div className="pager">
+                  <Link to="/users?p=1">prev</Link>
+                  <Link to="/users?p=2">next</Link>
+                </div>
               </div>
           </div>
         </div>

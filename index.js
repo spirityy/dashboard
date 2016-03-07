@@ -1,11 +1,11 @@
 import React from 'react'
 import { Router,Route,Link,browserHistory,IndexRoute } from 'react-router'
 import { render } from 'react-dom'
-import './index.css'
+import './assets/css/index.css'
 
 //components
-import Orders from '../components/orders.js'
-import Users from '../components/users.js'
+import Orders from './components/orders.js'
+import Users from './components/users.js'
 
 //pages
 const Header = React.createClass({

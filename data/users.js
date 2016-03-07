@@ -28,6 +28,18 @@ const users = [
     name:'rita',
     age:30,
     sex:'female'
+  },
+  {
+    id:6,
+    name:'edison',
+    age:30,
+    sex:'male'
+  },
+  {
+    id:7,
+    name:'paul',
+    age:30,
+    sex:'male'
   }
 ]
 

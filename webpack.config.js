@@ -1,9 +1,9 @@
-var webpack = require('webpack');
+var webpack = require('webpack')
 
 module.exports = {
   entry:{
-    'index':'./public/index.js',
-    'index.min': './public/index.js'
+    'index':'./index.js',
+    'index.min': './index.js'
   },
   output: {
     path:__dirname + '/build',
@@ -19,10 +19,8 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
       include: /\.min\.js$/,
       minimize: true,
-      compress: {
-          warnings: false
-      }
+      compress: { warnings: false }
     })
     //new webpack.optimize.OccurenceOrderPlugin()
   ]
-};
+}

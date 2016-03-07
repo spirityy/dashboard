@@ -1,4 +1,4 @@
 node_modules/
 npm-debug.log
 .gitignore
-public/.sass-cache
+assets/.sass-cache
