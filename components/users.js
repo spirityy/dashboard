@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import $ from 'jquery'
+//import $ from 'jquery'
 
 //import component style
 import '../assets/css/user.css'
@@ -9,13 +9,46 @@ import '../assets/css/user.css'
 import datausers from '../data/users.js'
 
 export default class Users extends React.Component {
-  constructor() {
-    super()
-    this.state =  { datausers:datausers }
+  constructor(props) {
+    super(props)
+    this.state = {
+      allUsers:datausers,
+      PagerUsers:[],
+      perPageNum:5,
+      lastNum:1
+    }
   }
-  componentDidMount() {
-    //console jquery
-    console.info($)
+  componentWillMount() {
+    this.buildPager()
+  }
+  componentWillReceiveProps(props) {
+    this.buildPager(props.location.query)
+  }
+  buildPager(q) {
+    this.state.lastNum = this.state.allUsers.length%this.state.perPageNum === 0? this.state.allUsers.length/this.state.perPageNum:parseInt(this.state.allUsers.length/this.state.perPageNum,10)+1
+    let query  = q || this.props.location.query
+    let cur_datausers = []
+    const lastNum = this.state.lastNum
+    const perPageNum = this.state.perPageNum
+    //if has query
+    if(query && query.p) {
+      const pageNum = parseInt(query.p,10)
+      //last page
+      if(pageNum === lastNum) {
+        if(this.state.allUsers.length%perPageNum===0){
+          cur_datausers = this.state.allUsers.slice(perPageNum*(pageNum-1),perPageNum*(pageNum-1)+perPageNum)
+        }else{
+          cur_datausers = this.state.allUsers.slice(perPageNum*(pageNum-1),perPageNum*(pageNum-1)+this.state.allUsers.length%perPageNum)
+        }
+      } else {
+        cur_datausers = this.state.allUsers.slice(perPageNum*(pageNum-1),perPageNum*pageNum)
+      }
+    } else {
+      //non page query
+      cur_datausers = this.state.allUsers.slice(0,perPageNum)
+    }
+    this.setState({ PagerUsers:cur_datausers })
+    //console.info(this.state)
   }
   editUser(user) {
     //updated User
@@ -25,20 +58,26 @@ export default class Users extends React.Component {
       age:user.uage,
       sex:user.usex
     }
-    this.state.datausers[this.state.datausers.findIndex(data => data.id === user.uid)] = updateUser
+    this.state.allUsers[this.state.allUsers.findIndex(data => data.id === user.uid)] = updateUser
     //ending editing
     user.setState({ editing:false })
     //update parent data
-    this.setState({ datausers:this.state.datausers })
+    this.setState({ allUsers:this.state.allUsers })
+    this.buildPager()
   }
   deleteUser(e) {
     //delete User
     if (window.confirm('确定删除'+e.target.name+'?')) {
-      this.state.datausers.splice(this.state.datausers.findIndex(data => data.id === parseInt(e.target.value,10)),1)
-      this.setState({ datausers:this.state.datausers })
+      this.state.allUsers.splice(this.state.allUsers.findIndex(data => data.id === parseInt(e.target.value,10)),1)
+      this.setState({ allUsers:this.state.allUsers })
+      this.buildPager()
     }
   }
   render() {
+    const pages = []
+    for (var i=0; i < this.state.lastNum; i++) {
+      pages.push(i+1)
+    }
     return(
       <main>
         <div className="main-wrapper">
@@ -56,14 +95,15 @@ export default class Users extends React.Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {this.state.datausers.map(function (user,i) {
+                    {this.state.PagerUsers.map(function (user,i) {
                       return <User user={user} key={i} deleteUser={this.deleteUser.bind(this)} editUser={this.editUser.bind(this)}/>
                     }.bind(this))}
                   </tbody>
                 </table>
                 <div className="pager">
-                  <Link to="/users?p=1">prev</Link>
-                  <Link to="/users?p=2">next</Link>
+                    {pages.map(function (p,i) {
+                      return <Link key={i} to={{ pathname:'/users',query:{ p:p } } }>{p}</Link>
+                    }.bind(this))}
                 </div>
               </div>
           </div>

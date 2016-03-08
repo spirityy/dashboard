@@ -62,12 +62,12 @@
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    padding: 0 8px;
     border-radius: 50%;
     border: 1px solid #c7c7c7;
     background: #fff;
-    height: 48px;
-    line-height: 48px;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
     margin-right: 25px; }
     .pager a:last-child {
       margin-right: 0px; }
