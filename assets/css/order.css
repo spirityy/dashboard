@@ -1,0 +1,73 @@
+.orders-wrapper {
+  border: 1px solid #EBEDED;
+  border-radius: 5px;
+  background-color: #fff; }
+  .orders-wrapper h2 {
+    margin: 0;
+    font-size: 18px;
+    padding: 0 30px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #EBEDED; }
+  .orders-wrapper .main {
+    padding: 30px; }
+    .orders-wrapper .main table {
+      width: 100%;
+      border-collapse: collapse; }
+    .orders-wrapper .main table thead {
+      border-radius: 5px;
+      background-color: #CAD3D6; }
+    .orders-wrapper .main table th {
+      height: 35px;
+      line-height: 35px;
+      color: #fff; }
+    .orders-wrapper .main tbody tr {
+      border-bottom: 1px solid #F0F0F0; }
+      .orders-wrapper .main tbody tr:last-child {
+        border-bottom: none; }
+    .orders-wrapper .main tbody td {
+      text-align: center;
+      height: 55px;
+      line-height: 55px; }
+      .orders-wrapper .main tbody td input[type="text"], .orders-wrapper .main tbody td select {
+        font-size: 16px;
+        height: 28px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid #C7C7C7;
+        text-align: center;
+        background-color: #fff; }
+      .orders-wrapper .main tbody td select {
+        width: 80px;
+        height: 30px; }
+      .orders-wrapper .main tbody td button {
+        cursor: pointer;
+        width: 60px;
+        height: 33px;
+        border: none;
+        border-radius: 3px;
+        color: #fff; }
+      .orders-wrapper .main tbody td .editing-btn {
+        background-color: #4A913C; }
+      .orders-wrapper .main tbody td .edit-btn {
+        background-color: #E8604A; }
+      .orders-wrapper .main tbody td .del-btn {
+        margin-left: 5px;
+        background-color: #e81c4f; }
+
+.pager {
+  margin-top: 40px;
+  text-align: center; }
+  .pager a {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #c7c7c7;
+    background: #fff;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    margin-right: 25px; }
+    .pager a:last-child {
+      margin-right: 0px; }

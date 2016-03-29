@@ -1,0 +1,21 @@
+{
+  "extends": "rackt",
+  "ecmaFeatures": {
+    "blockBindings": true,
+     "modules": true,
+     "jsx":true
+  },
+  "space-after-keywords":"never",
+  "plugins": [
+    "react"
+  ],
+  "env": {
+    "node": true,
+    "browser":true,
+    "es6":true
+  },
+  "rules":{
+    "no-console":0,
+    "no-var":0
+  }
+}

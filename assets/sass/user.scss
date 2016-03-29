@@ -1,0 +1,93 @@
+.users-wrapper,.orders-wrapper{
+  border: 1px solid #EBEDED;
+  border-radius: 5px;
+  background-color: #fff;
+  h2{
+    margin: 0;
+    font-size: 18px;
+    padding: 0 30px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #EBEDED;
+  }
+  .main{
+    padding: 30px;
+    table{
+      width: 100%;
+      border-collapse:collapse;
+    }
+    table thead{
+      border-radius: 5px;
+      background-color:#CAD3D6;
+    }
+    table th{
+      height: 35px;
+      line-height: 35px;
+      color: #fff;
+    }
+    tbody tr{
+      border-bottom: 1px solid #F0F0F0;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    tbody td{
+      text-align: center;
+      height: 55px;
+      line-height: 55px;
+      input[type="text"],select{
+        font-size: 16px;
+        height: 28px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid #C7C7C7;
+        text-align: center;
+        background-color: #fff;
+      }
+      select{
+        width: 80px;
+        height: 30px;
+      }
+      button{
+        cursor: pointer;
+        width: 60px;
+        height: 33px;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+      }
+      .editing-btn{
+        background-color: #4A913C;
+      }
+      .edit-btn{
+        background-color: #E8604A;
+      }
+      .del-btn{
+        margin-left: 5px;
+        background-color: #e81c4f;
+      }
+    }
+  }
+}
+.pager{
+  margin-top: 40px;
+  text-align: center;
+  a{
+    display: inline-block;
+    text-decoration:none;
+    cursor: pointer;
+    border-radius: (50%);
+    border: 1px solid #c7c7c7;
+    background: #fff;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    margin-right: 25px;
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+}
+.users-main{
+
+}
