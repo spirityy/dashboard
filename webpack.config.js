@@ -16,6 +16,14 @@ module.exports = {
     ]
   },
   plugins: [
+<<<<<<< HEAD
+=======
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+>>>>>>> master
     new webpack.optimize.UglifyJsPlugin({
       include: /\.min\.js$/,
       minimize: true,
