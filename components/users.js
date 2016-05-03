@@ -102,7 +102,7 @@ export default class Users extends React.Component {
                 </table>
                 <div className="pager">
                     {pages.map(function (p,i) {
-                      return <Link key={i} to={{ pathname:'/users',query:{ p:p } } }>{p}</Link>
+                      return <Link key={i} to={{ pathname:'/dashboard/users',query:{ p:p } } }>{p}</Link>
                     }.bind(this))}
                 </div>
               </div>
