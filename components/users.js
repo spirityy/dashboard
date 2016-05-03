@@ -35,15 +35,9 @@ export default class Users extends React.Component {
       const pageNum = parseInt(query.p,10)
       //last page
       if(pageNum === lastNum) {
-<<<<<<< HEAD
-        if(this.state.allUsers.length%perPageNum===0){
-          cur_datausers = this.state.allUsers.slice(perPageNum*(pageNum-1),perPageNum*(pageNum-1)+perPageNum)
-        }else{
-=======
         if(this.state.allUsers.length%perPageNum===0) {
           cur_datausers = this.state.allUsers.slice(perPageNum*(pageNum-1),perPageNum*(pageNum-1)+perPageNum)
         } else {
->>>>>>> master
           cur_datausers = this.state.allUsers.slice(perPageNum*(pageNum-1),perPageNum*(pageNum-1)+this.state.allUsers.length%perPageNum)
         }
       } else {

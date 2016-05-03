@@ -13,11 +13,7 @@ const Header = React.createClass({
     return(
       <header>
         <div className="logo">
-<<<<<<< HEAD
-          <Link to="/">Logo</Link>
-=======
           <Link to="/dashboard">Logo</Link>
->>>>>>> master
         </div>
         <div className="hd">
           Dashboard
@@ -32,13 +28,8 @@ const Side = React.createClass({
     return(
       <aside>
         <ul>
-<<<<<<< HEAD
-          <li><Link to="/orders" activeClassName="active">Orders</Link></li>
-          <li><Link to="/users" activeClassName="active">Users</Link></li>
-=======
           <li><Link to="/dashboard/orders" activeClassName="active">Orders</Link></li>
           <li><Link to="/dashboard/users" activeClassName="active">Users</Link></li>
->>>>>>> master
         </ul>
       </aside>
     )
@@ -71,17 +62,10 @@ const App = React.createClass({
 
 render((
   <Router history={browserHistory}>
-<<<<<<< HEAD
-    <Route path="/" component={App}>
-      <IndexRoute component={Index} />
-      <Route path="/orders" component={Orders} />
-      <Route path="/users" component={Users} />
-=======
     <Route path="/dashboard" component={App}>
       <IndexRoute component={Index} />
       <Route path="orders" component={Orders} />
       <Route path="users" component={Users} />
->>>>>>> master
     </Route>
   </Router>
 ),document.getElementById('app'))
