@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Orders extends React.Component {
+class Orders extends React.Component {
   render() {
     return(
       <main>
@@ -8,7 +8,9 @@ export default class Orders extends React.Component {
           <div className="users-wrapper">
               <h2>Orders</h2>
               <div className="main">
-
+                <table>
+                  table
+                </table>
               </div>
           </div>
         </div>
@@ -16,3 +18,5 @@ export default class Orders extends React.Component {
     )
   }
 }
+
+module.exports = Orders

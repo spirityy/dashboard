@@ -8,7 +8,7 @@ import '../assets/css/user.css'
 //import simulate data
 import datausers from '../data/users.js'
 
-export default class Users extends React.Component {
+class Users extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -102,7 +102,7 @@ export default class Users extends React.Component {
                 </table>
                 <div className="pager">
                     {pages.map(function (p,i) {
-                      return <Link key={i} to={{ pathname:'/dashboard/users',query:{ p:p } } }>{p}</Link>
+                      return <Link key={i} to={{ pathname:'/users',query:{ p:p } } }>{p}</Link>
                     }.bind(this))}
                 </div>
               </div>
@@ -166,3 +166,5 @@ class User extends React.Component {
     )
   }
 }
+
+module.exports = Users

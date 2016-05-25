@@ -1,7 +1,7 @@
 # dashboard
 A dashboard example with React/ReactRouter/Webpack
 
-![alt tag](https://raw.githubusercontent.com/spirityy/dashboard/master/dashboard_demo.png)
+![alt tag](https://raw.githubusercontent.com/spirityy/dashboard/master/demo.png)
 
 =====================
 

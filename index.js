@@ -1,71 +1,18 @@
 import React from 'react'
-import { Router,Route,Link,browserHistory,IndexRoute } from 'react-router'
+import { Router,browserHistory } from 'react-router'
 import { render } from 'react-dom'
-import './assets/css/index.css'
 
-//components
-import Orders from './components/orders.js'
-import Users from './components/users.js'
-
-//pages
-const Header = React.createClass({
-  render() {
-    return(
-      <header>
-        <div className="logo">
-          <Link to="/dashboard">Logo</Link>
-        </div>
-        <div className="hd">
-          Dashboard
-        </div>
-      </header>
-    )
-  }
-})
-
-const Side = React.createClass({
-  render() {
-    return(
-      <aside>
-        <ul>
-          <li><Link to="/dashboard/orders" activeClassName="active">Orders</Link></li>
-          <li><Link to="/dashboard/users" activeClassName="active">Users</Link></li>
-        </ul>
-      </aside>
-    )
-  }
-})
-
-const Index = React.createClass({
-  render() {
-    return (
-      <main>
-        <div className="main-wrapper">
-          <h2>welcome</h2>
-        </div>
-      </main>
-    )
-  }
-})
-
-const App = React.createClass({
-  render() {
-    return(
-      <div>
-        <Header />
-        <Side />
-        {this.props.children}
-      </div>
-    )
-  }
-})
+//routes
+const rootRoute = {
+  path:'/',
+  component:require('./components/App'),
+  indexRoute:require('./routes/index'),
+  childRoutes:[
+    require('./routes/users'),
+    require('./routes/orders')
+  ]
+}
 
 render((
-  <Router history={browserHistory}>
-    <Route path="/dashboard" component={App}>
-      <IndexRoute component={Index} />
-      <Route path="orders" component={Orders} />
-      <Route path="users" component={Users} />
-    </Route>
-  </Router>
+  <Router history={browserHistory} routes={rootRoute} />
 ),document.getElementById('app'))
