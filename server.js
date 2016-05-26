@@ -1,9 +1,9 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
 
-var webpack = require('webpack')
-var webpackDevMiddleware = require('webpack-dev-middleware')
-var WebpackConfig = require('./webpack.config')
+const webpack = require('webpack')
+const webpackDevMiddleware = require('webpack-dev-middleware')
+const WebpackConfig = require('./webpack.config')
 
 app.use(webpackDevMiddleware(webpack(WebpackConfig), {
   publicPath:   '/build/',
@@ -15,7 +15,7 @@ app.use(webpackDevMiddleware(webpack(WebpackConfig), {
 app.set('port', process.env.PORT || 8000)
 app.use(express.static(__dirname))
 
-var fs = require('fs')
+const fs = require('fs')
 
 app.get('/',function (req,res) {
   fs.readFile(__dirname + '/index.html', 'utf8', function (err, text) {

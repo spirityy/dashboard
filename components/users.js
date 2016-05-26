@@ -75,7 +75,7 @@ class Users extends React.Component {
   }
   render() {
     const pages = []
-    for (var i=0; i < this.state.lastNum; i++) {
+    for (let i=0; i < this.state.lastNum; i++) {
       pages.push(i+1)
     }
     return(
