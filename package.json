@@ -18,8 +18,10 @@
   "homepage": "https://github.com/spirityy/dashboard#readme",
   "dependencies": {
     "history": "^2.0.0-rc2",
+    "immutable": "^3.8.1",
     "jquery": "^2.2.1",
     "react": "^0.14.7",
+    "react-addons-pure-render-mixin": "^15.1.0",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0-rc5",
     "webpack": "^2.0.6-beta"
