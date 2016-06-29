@@ -1,36 +1,68 @@
 import React from 'react'
+//import { Map,List } from 'immutable'
 import Immutable from 'immutable'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-//let da = { a:11, b:22, c:[ 1,2,3 ] }
+import '../assets/css/order.css'
 
 class Orders extends React.Component {
   constructor(props) {
     super(props)
+    /*
+    this.state = {
+      orders:List([
+        Map({
+          a:11,
+          b:22,
+          c:[ 1,2,3 ]
+        })
+      ])
+    }
+    */
     this.state = Immutable.fromJS({
-      a:11,
-      b:22,
-      c:[ 1,2,3 ]
+      orders:[
+        {
+          a:11,
+          b:22,
+          c:[ 1,2,3 ]
+        }
+      ]
     })
     this.shouldComponentUpdate  = PureRenderMixin.shouldComponentUpdate.bind(this)
     //this.state = da
   }
-  shouldComponentUpdate() {
-    console.info(11)
-    return true
-  }
   changeState() {
-    this.setState({ a:22 })
+    this.setState(({ data }) => ({ data:data.update('a', v => v + 1) }))
+    console.info(this.state.data)
   }
   render() {
+    let orders = this.state.get('orders')
     return(
       <main>
         <div className="main-wrapper">
-          <div className="users-wrapper">
+          <div className="orders-wrapper">
               <h2>Orders</h2>
               <div className="main">
-                <h3>{this.state.a}</h3>
-                <button onClick={this.changeState.bind(this)}>change state</button>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>id</th>
+                      <th>num</th>
+                      <th>price</th>
+                      <th>time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {orders.map(function (order,i) {
+                      return (<tr key={i}>
+                        <td>{order.get('a')}</td>
+                        <td>{order.get('b')}</td>
+                        <td>{order.get('c')}</td>
+                        <td>3213</td>
+                      </tr>)
+                    }.bind(this))}
+                  </tbody>
+                </table>
               </div>
           </div>
         </div>

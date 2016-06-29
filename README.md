@@ -1,5 +1,5 @@
 # dashboard
-A dashboard example with React/ReactRouter/Webpack
+A dashboard example with React/Immutable/ReactRouter/Webpack
 
 ![alt tag](https://raw.githubusercontent.com/spirityy/dashboard/master/demo.png)
 
