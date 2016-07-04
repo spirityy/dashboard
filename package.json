@@ -23,6 +23,7 @@
     "react": "^0.14.7",
     "react-addons-pure-render-mixin": "^15.1.0",
     "react-dom": "^0.14.7",
+    "react-immutable-render-mixin": "^0.9.7",
     "react-router": "^2.0.0-rc5",
     "webpack": "^2.0.6-beta"
   },
