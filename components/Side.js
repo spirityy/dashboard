@@ -6,8 +6,8 @@ export default class Side extends React.Component {
     return(
       <aside>
         <ul>
-          <li><Link to="/orders" activeClassName="active">Orders</Link></li>
-          <li><Link to="/users" activeClassName="active">Users</Link></li>
+          <li><Link to="/order" activeClassName="active">Order</Link></li>
+          <li><Link to="/user" activeClassName="active">User</Link></li>
         </ul>
       </aside>
     )

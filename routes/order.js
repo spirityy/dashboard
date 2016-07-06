@@ -1,8 +1,8 @@
 module.exports = {
-  path: 'users',
+  path: 'order',
   getComponents(nextState, cb) {
     require.ensure([], (require) => {
-      cb(null, require('../components/Users'))
+      cb(null, require('../components/Order'))
     })
   }
 }

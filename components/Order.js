@@ -4,7 +4,6 @@ import Immutable from 'immutable'
 //import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { shouldComponentUpdate } from 'react-immutable-render-mixin'
 
-
 import '../assets/css/order.css'
 
 class Orders extends React.Component {
@@ -35,7 +34,7 @@ class Orders extends React.Component {
     let orders = this.state.orders
     switch (method) {
       case 'plus':
-        orders = (function () {
+        orders = (() => {
           return orders.update(i,(order) => {
             return Immutable.fromJS({ id:order.get('id'),num:parseInt(order.get('num')) + 1 ,price:order.get('price'),totalprice: parseFloat(order.get('price')) * (parseInt(order.get('num')) + 1) })
           })
@@ -43,7 +42,7 @@ class Orders extends React.Component {
         this.setState({ orders })
         break
       case 'reduce':
-        orders = (function () {
+        orders = (() => {
           return orders.update(i,(order) => {
             return Immutable.fromJS({ id:order.get('id'),num:parseInt(order.get('num')) - 1 ,price:order.get('price'),totalprice: parseFloat(order.get('price')) * (parseInt(order.get('num')) - 1) })
           })
@@ -52,8 +51,11 @@ class Orders extends React.Component {
         break
     }
   }
+  editPrice() {
+
+  }
   render() {
-    console.info(111)
+    console.info('render')
     let orders = this.state.orders
     return(
       <main>
@@ -64,11 +66,11 @@ class Orders extends React.Component {
                 <table>
                   <thead>
                     <tr>
-                      <th>id</th>
-                      <th>num</th>
-                      <th>price</th>
-                      <th>totalprice</th>
-                      <th>time</th>
+                      <th width="20%">id</th>
+                      <th width="20%">num</th>
+                      <th width="20%">price</th>
+                      <th width="20%">totalprice</th>
+                      <th width="20%">time</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -80,7 +82,10 @@ class Orders extends React.Component {
                           {order.get('num')}
                           <i onClick={this.changeNum.bind(this,i,'plus')}>+</i>
                         </td>
-                        <td>{order.get('price')}</td>
+                        <td>
+                          {order.get('price')}
+                          <button className="edit-btn" onclick="{this.editPrice}">edit</button>
+                        </td>
                         <td>{order.get('totalprice')}</td>
                         <td>2015-03-09</td>
                       </tr>)

@@ -8,8 +8,8 @@ const rootRoute = {
   component:require('./components/App'),
   indexRoute:require('./routes/index'),
   childRoutes:[
-    require('./routes/users'),
-    require('./routes/orders')
+    require('./routes/user'),
+    require('./routes/order')
   ]
 }
 
