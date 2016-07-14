@@ -82,9 +82,8 @@ class Orders extends React.Component {
                           {order.get('num')}
                           <i onClick={this.changeNum.bind(this,i,'plus')}>+</i>
                         </td>
-                        <td>
+                        <td onclick="{this.editPrice}">
                           {order.get('price')}
-                          <button className="edit-btn" onclick="{this.editPrice}">edit</button>
                         </td>
                         <td>{order.get('totalprice')}</td>
                         <td>2015-03-09</td>

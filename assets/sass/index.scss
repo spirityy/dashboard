@@ -14,7 +14,8 @@ body {
 header{
   height: 70px;
   line-height: 70px;
-  background-color:#fff;
+  background-color:#354661;
+  color: #fff;
   font-size: 24px;
   clear: both;
   .logo{
@@ -23,11 +24,10 @@ header{
     text-align: center;
     font-size: 30px;
     height: 70px;
-    background-color: #25292A;
-    border-bottom: 1px solid #454A4B;
+    background-color: #293950;
     a{
       text-decoration: none;
-      color: #EA7F31
+      color: #fff;
     }
   }
   .hd{
@@ -36,13 +36,13 @@ header{
     width: 75%;
     padding-left: 5%;
     display: inline-block;
-    border-bottom: 1px solid #EBEDED;
   }
 }
 aside{
   height: 100%;
   min-height: 1000px;
-  background-color: #2F3436;
+  background-color: #354661;
+  color: #fff;
   width: 20%;
   float: left;
   ul{
@@ -56,25 +56,22 @@ aside{
     text-decoration: none;
     font-weight: bold;
     display: block;
-    color: #D1D6D8;
+    color: #fff;
     height: 50px;
     line-height: 50px;
     padding-left: 20px;
     &.active{
-      border-left: 8px solid #EA7F31;
+      border-left: 8px solid #00A3FE;
       padding-left: 12px;
-      background-color: #F3F5F5;
-      color:#545D5F;
+      background-color: #293950;
+      color:#fff;
     }
   }
 }
 main{
   height: 100%;
   min-height: 1000px;
-  background-color: #F3F5F5;
+  background-color: #D6DBE7;
   width: 80%;
   float: left;
-  .main-wrapper{
-    padding: 30px;
-  }
 }

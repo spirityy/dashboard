@@ -1,24 +1,26 @@
-.users-wrapper,.orders-wrapper{
-  border: 1px solid #EBEDED;
+.users-wrapper{
   border-radius: 5px;
-  background-color: #fff;
   h2{
     margin: 0;
     font-size: 18px;
     padding: 0 30px;
     height: 60px;
     line-height: 60px;
-    border-bottom: 1px solid #EBEDED;
+    border-bottom: 1px solid #C8CEDD;
+    background-color: #EFF2F8;
+    color: #69788E;
   }
   .main{
     padding: 30px;
+    margin: 30px;
     table{
+      background-color: #fff;
       width: 100%;
       border-collapse:collapse;
     }
     table thead{
       border-radius: 5px;
-      background-color:#CAD3D6;
+      background-color:#8C96B4;
     }
     table th{
       height: 35px;

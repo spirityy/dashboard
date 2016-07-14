@@ -1,22 +1,24 @@
 .orders-wrapper {
-  border: 1px solid #EBEDED;
-  border-radius: 5px;
-  background-color: #fff; }
+  border-radius: 5px; }
   .orders-wrapper h2 {
     margin: 0;
     font-size: 18px;
     padding: 0 30px;
     height: 60px;
     line-height: 60px;
-    border-bottom: 1px solid #EBEDED; }
+    border-bottom: 1px solid #C8CEDD;
+    background-color: #EFF2F8;
+    color: #69788E; }
   .orders-wrapper .main {
+    margin: 30px;
     padding: 30px; }
     .orders-wrapper .main table {
       width: 100%;
+      background-color: #fff;
       border-collapse: collapse; }
     .orders-wrapper .main table thead {
       border-radius: 5px;
-      background-color: #CAD3D6; }
+      background-color: #8C96B4; }
     .orders-wrapper .main table th {
       height: 35px;
       line-height: 35px;
