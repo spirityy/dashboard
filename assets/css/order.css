@@ -30,7 +30,8 @@
     .orders-wrapper .main tbody td {
       text-align: center;
       height: 55px;
-      line-height: 55px; }
+      line-height: 55px;
+      color: #69788E; }
       .orders-wrapper .main tbody td input[type="text"], .orders-wrapper .main tbody td select {
         font-size: 16px;
         height: 28px;
@@ -50,12 +51,15 @@
         border-radius: 3px;
         color: #fff; }
       .orders-wrapper .main tbody td .editing-btn {
-        background-color: #4A913C; }
+        border: 1px solid #4A913C;
+        color: #4A913C; }
       .orders-wrapper .main tbody td .edit-btn {
-        background-color: #E8604A; }
+        border: 1px solid #E8604A;
+        color: #E8604A; }
       .orders-wrapper .main tbody td .del-btn {
         margin-left: 5px;
-        background-color: #e81c4f; }
+        border: 1px solid #e81c4f;
+        color: #e81c4f; }
 
 .pager {
   margin-top: 40px;

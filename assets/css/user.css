@@ -30,7 +30,8 @@
     .users-wrapper .main tbody td {
       text-align: center;
       height: 55px;
-      line-height: 55px; }
+      line-height: 55px;
+      color: #69788E; }
       .users-wrapper .main tbody td input[type="text"], .users-wrapper .main tbody td select {
         font-size: 16px;
         height: 28px;
@@ -43,6 +44,7 @@
         width: 80px;
         height: 30px; }
       .users-wrapper .main tbody td button {
+        background-color: #fff;
         cursor: pointer;
         width: 60px;
         height: 33px;
@@ -50,12 +52,15 @@
         border-radius: 3px;
         color: #fff; }
       .users-wrapper .main tbody td .editing-btn {
-        background-color: #4A913C; }
+        border: 1px solid #4A913C;
+        color: #4A913C; }
       .users-wrapper .main tbody td .edit-btn {
-        background-color: #E8604A; }
+        border: 1px solid #E8604A;
+        color: #E8604A; }
       .users-wrapper .main tbody td .del-btn {
         margin-left: 5px;
-        background-color: #e81c4f; }
+        border: 1px solid #e81c4f;
+        color: #e81c4f; }
 
 .pager {
   margin-top: 40px;

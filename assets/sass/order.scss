@@ -37,6 +37,7 @@
       text-align: center;
       height: 55px;
       line-height: 55px;
+      color: #69788E;
       input[type="text"],select{
         font-size: 16px;
         height: 28px;
@@ -59,14 +60,17 @@
         color: #fff;
       }
       .editing-btn{
-        background-color: #4A913C;
+        border: 1px solid #4A913C;
+        color:#4A913C;
       }
       .edit-btn{
-        background-color: #E8604A;
+        border: 1px solid #E8604A;
+        color:#E8604A;
       }
       .del-btn{
         margin-left: 5px;
-        background-color: #e81c4f;
+        border: 1px solid #e81c4f;
+        color: #e81c4f;
       }
     }
   }
