@@ -1,8 +1,12 @@
 import React from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
 import '../assets/css/index.css'
 
 import Header from './Header'
 import Side from './Side'
+
+
 
 class App extends React.Component {
   render() {
@@ -10,7 +14,9 @@ class App extends React.Component {
       <div>
         <Header />
         <Side />
-        { this.props.children }
+        <ReactCSSTransitionGroup component="div" transitionName="main">
+          { this.props.children }
+        </ReactCSSTransitionGroup>
       </div>
     )
   }

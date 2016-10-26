@@ -80,7 +80,7 @@ class Users extends React.Component {
       pages.push(i+1)
     }
     return(
-      <main>
+      <main key="user">
         <div className="main-wrapper">
           <div className="users-wrapper">
               <h2>Users</h2>

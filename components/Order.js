@@ -4,6 +4,8 @@ import Immutable from 'immutable'
 //import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { shouldComponentUpdate } from 'react-immutable-render-mixin'
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
 import '../assets/css/order.css'
 
 class Orders extends React.Component {
@@ -14,8 +16,8 @@ class Orders extends React.Component {
         {
           id:1,
           num:1,
-          price:11.3,
-          totalprice:11.3
+          price:11,
+          totalprice:11
         },
         {
           id:2,
@@ -55,10 +57,10 @@ class Orders extends React.Component {
 
   }
   render() {
-    console.info('render')
     let orders = this.state.orders
     return(
-      <main>
+      <ReactCSSTransitionGroup transitionName="main">
+       <main>
         <div className="main-wrapper">
           <div className="orders-wrapper">
               <h2>Orders</h2>
@@ -95,6 +97,7 @@ class Orders extends React.Component {
           </div>
         </div>
       </main>
+    </ReactCSSTransitionGroup>
     )
   }
 }
