@@ -24,10 +24,12 @@
     "immutable": "*",
     "jquery": "^3.1.0",
     "react": "*",
+    "react-addons-css-transition-group": "^15.3.0",
     "react-addons-pure-render-mixin": "*",
     "react-dom": "^15.2.1",
     "react-immutable-render-mixin": "*",
     "react-router": "*",
+    "react-router-transition": "0.0.5",
     "webpack": "*"
   },
   "devDependencies": {

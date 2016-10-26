@@ -9,7 +9,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #D6DBE7; }
 
 header {
   height: 70px;
@@ -64,6 +65,33 @@ aside {
 main {
   height: 100%;
   min-height: 1000px;
-  background-color: #D6DBE7;
   width: 80%;
   float: left; }
+
+.main-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in; }
+
+.main-enter.main-enter-active {
+  opacity: 1; }
+
+.main-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in; }
+
+.main-leave.main-leave-active {
+  opacity: 0.01; }
+
+.example-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in; }
+
+.example-enter.example-enter-active {
+  opacity: 1; }
+
+.example-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in; }
+
+.example-leave.example-leave-active {
+  opacity: 0; }
